@@ -30,7 +30,7 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <Router basename="/Velora-luxury-ecommerce">
+    <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
 
       <div className="app-container">

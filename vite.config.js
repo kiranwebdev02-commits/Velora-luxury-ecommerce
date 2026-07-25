@@ -3,5 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Velora-luxury-ecommerce/',
+  base: process.env.NETLIFY === 'true'
+    ? '/'
+    : '/Velora-luxury-ecommerce/',
 })

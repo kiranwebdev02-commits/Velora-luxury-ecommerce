@@ -1,0 +1,38 @@
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.story-image-wrapper {
+  aspect-ratio: 4/3;
+  background-color: var(--bg-card);
+}
+
+.grayscale {
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.8s ease;
+}
+
+.story-image-wrapper:hover .grayscale {
+  filter: grayscale(0%) contrast(1);
+}
+
+.story-content {
+  max-width: 500px;
+}
+
+.text-lg {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.mt-10 { margin-top: 2.5rem; }
+
+@media (max-width: 1024px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}

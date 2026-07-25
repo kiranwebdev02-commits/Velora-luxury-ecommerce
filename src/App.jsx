@@ -27,7 +27,7 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Velora-luxury-ecommerce">
       <ScrollToTop />
       <div className="app-container">
         <Navbar />

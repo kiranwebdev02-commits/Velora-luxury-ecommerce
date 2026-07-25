@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
@@ -19,27 +20,33 @@ import NotFound from './pages/NotFound';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return null;
 };
 
 function App() {
   return (
-  
-      <Router basename="/Velora-luxury-ecommerce">
+    <Router>
       <ScrollToTop />
+
       <div className="app-container">
         <Navbar />
         <CartDrawer />
         <Toast />
+
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/collections" element={<Collections />} />
-            <Route path="/collections/:category" element={<CollectionDetails />} />
+            <Route
+              path="/collections/:category"
+              element={<CollectionDetails />}
+            />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/wishlist" element={<Wishlist />} />
@@ -49,6 +56,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
+
         <Footer />
       </div>
     </Router>

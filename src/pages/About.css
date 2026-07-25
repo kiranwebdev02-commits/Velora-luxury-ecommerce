@@ -1,0 +1,30 @@
+.about-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.about-image-wrapper {
+  aspect-ratio: 3/4;
+  background-color: var(--bg-card);
+}
+
+.text-lg {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
